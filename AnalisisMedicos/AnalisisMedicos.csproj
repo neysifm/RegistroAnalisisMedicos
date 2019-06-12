@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entidades\Analisis.cs" />
+    <Compile Include="Entidades\TiposAnalisis.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="Entidades\" />
     <Folder Include="UI\Consultas\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
