@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AnalisisMedicos
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class MainForm : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
