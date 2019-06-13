@@ -64,8 +64,9 @@
   <ItemGroup>
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Analisis.cs" />
+    <Compile Include="Entidades\AnalisisDetalle.cs" />
     <Compile Include="Entidades\TiposAnalisis.cs" />
-    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -7,24 +7,21 @@ using System.Threading.Tasks;
 
 namespace AnalisisMedicos.Entidades
 {
-    public class Usuario
+    public class Usuarios
     {
         [Key]
 
-        public int UsuarioId { get; set; }
+        public int UsuariosId { get; set; }
         public String Nombres { get; set; }
         public String Email { get; set; }
-        public String NivelUsuario { get; set; }
         public String Clave { get; set; }
 
-        public Usuario()
+        public Usuarios()
         {
-            UsuarioId = 0;
+            UsuariosId = 0;
             Nombres = String.Empty;
             Email = String.Empty;
-            NivelUsuario = String.Empty;
             Clave = String.Empty;
         }
-
     }
 }

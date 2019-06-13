@@ -12,14 +12,16 @@ namespace AnalisisMedicos.Entidades
         [Key]
 
         public int AnalisisId { get; set; }
-        public int UsuarioId  { get; set; }
+        public int TipoId     { get; set; }
         public DateTime Fecha { get; set; }
+        public virtual List<AnalisisDetalle> AnalisisDetalle { get; set; }
 
         public Analisis()
         {
             AnalisisId = 0;
-            UsuarioId = 0;
+            TipoId = 0;
             Fecha = DateTime.Now;
+            AnalisisDetalle = new List<AnalisisDetalle>();
         }
     }
 }
