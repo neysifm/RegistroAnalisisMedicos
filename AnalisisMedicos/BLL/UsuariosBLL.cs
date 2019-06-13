@@ -18,7 +18,7 @@ namespace AnalisisMedicos.BLL
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Usuarios.Add(usuario) != null)
+                if (contexto.Usuario.Add(usuario) != null)
                     paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -38,7 +38,7 @@ namespace AnalisisMedicos.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var eliminar = contexto.Usuarios.Find(Id);
+                var eliminar = contexto.Usuario.Find(Id);
                 contexto.Entry(eliminar).State = EntityState.Deleted;
 
                 paso = contexto.SaveChanges() > 0;
@@ -80,7 +80,7 @@ namespace AnalisisMedicos.BLL
             Usuarios usuario = new Usuarios();
             try
             {
-                usuario = contexto.Usuarios.Find(id);
+                usuario = contexto.Usuario.Find(id);
             }
             catch (Exception)
             {
@@ -99,7 +99,7 @@ namespace AnalisisMedicos.BLL
             Contexto contexto = new Contexto();
             try
             {
-                Lista = contexto.Usuarios.Where(usuario).ToList();
+                Lista = contexto.Usuario.Where(usuario).ToList();
             }
             catch (Exception)
             {

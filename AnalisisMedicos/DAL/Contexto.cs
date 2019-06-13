@@ -10,9 +10,9 @@ namespace AnalisisMedicos.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Analisis> Analisis { get; set; }
-        public DbSet<Usuarios> Usuarios { get; set; }
-        public DbSet<TiposAnalisis> TiposAnalisis { get; set; }
+        public DbSet<Analisis> Analisi { get; set; }
+        public DbSet<Usuarios> Usuario { get; set; }
+        public DbSet<TiposAnalisis> TiposAnalisi { get; set; }
 
         public Contexto() : base("ConStr") { }
     }
