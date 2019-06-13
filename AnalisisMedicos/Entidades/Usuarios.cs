@@ -13,15 +13,15 @@ namespace AnalisisMedicos.Entidades
 
         public int UsuariosId { get; set; }
         public String Nombres { get; set; }
-        public String Email { get; set; }
-        public String Clave { get; set; }
+        public String Direccion { get; set; }
+        public String Telefono { get; set; }
 
         public Usuarios()
         {
             UsuariosId = 0;
             Nombres = String.Empty;
-            Email = String.Empty;
-            Clave = String.Empty;
+            Direccion = String.Empty;
+            Telefono = String.Empty;
         }
     }
 }
