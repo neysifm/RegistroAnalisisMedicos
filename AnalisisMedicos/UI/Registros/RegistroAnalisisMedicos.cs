@@ -17,9 +17,5 @@ namespace AnalisisMedicos.UI.Registros
             InitializeComponent();
         }
 
-        private void RegistroAnalisisMedicos_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
