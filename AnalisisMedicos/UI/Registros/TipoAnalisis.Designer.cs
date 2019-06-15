@@ -156,7 +156,6 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "TipoAnalisis";
             this.Text = "Tipos de Analisis";
-            this.Load += new System.EventHandler(this.TipoAnalisis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);

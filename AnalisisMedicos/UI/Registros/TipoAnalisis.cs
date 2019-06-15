@@ -19,11 +19,6 @@ namespace AnalisisMedicos.UI.Registros
             InitializeComponent();
         }
 
-        private void TipoAnalisis_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private TiposAnalisis LlenarClase()
         {
             TiposAnalisis tipo = new TiposAnalisis
@@ -126,8 +121,11 @@ namespace AnalisisMedicos.UI.Registros
                     }
                 }
             }
-
-    }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+        }
 
         private void EliminarmetroButton_Click(object sender, EventArgs e)
         {
@@ -150,3 +148,4 @@ namespace AnalisisMedicos.UI.Registros
             }
         }
     }
+}
