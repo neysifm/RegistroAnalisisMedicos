@@ -57,8 +57,6 @@ namespace AnalisisMedicos.UI.Registros
             {
                 MessageBox.Show("Error");
             }
-
-
         }
 
         private void ActualizarGrip()
@@ -135,11 +133,6 @@ namespace AnalisisMedicos.UI.Registros
             }
         }
 
-        private void RegistroAnalisisMedicos_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void GuardarmetroButton_Click(object sender, EventArgs e)
         {
             if (IDnumericUpDown.Value > 0)
@@ -181,6 +174,11 @@ namespace AnalisisMedicos.UI.Registros
                 }
                 MessageBox.Show("Error al intentar eliminar el registro!");
             }
+        }
+
+        private void NuevometroButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

@@ -111,5 +111,27 @@ namespace AnalisisMedicos.BLL
             }
             return Lista;
         }
+
+        public static bool Duplicado(string descripcion)
+        {
+            bool paso = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                paso = contexto.TiposAnalisi.Any(p => p.Descripcion == descripcion);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return paso;
+        }
     }
 }

@@ -221,6 +221,7 @@
             this.NuevometroButton.TabIndex = 8;
             this.NuevometroButton.Text = "Nuevo";
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -272,7 +273,6 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "RegistroAnalisisMedicos";
             this.Text = "Registro de Analisis Medicos";
-            this.Load += new System.EventHandler(this.RegistroAnalisisMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();

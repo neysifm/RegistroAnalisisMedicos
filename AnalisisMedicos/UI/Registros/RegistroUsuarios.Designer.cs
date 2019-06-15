@@ -178,7 +178,7 @@
             // 
             // BuscarmetroButton
             // 
-            this.BuscarmetroButton.Location = new System.Drawing.Point(183, 89);
+            this.BuscarmetroButton.Location = new System.Drawing.Point(183, 91);
             this.BuscarmetroButton.Name = "BuscarmetroButton";
             this.BuscarmetroButton.Size = new System.Drawing.Size(75, 23);
             this.BuscarmetroButton.TabIndex = 8;
