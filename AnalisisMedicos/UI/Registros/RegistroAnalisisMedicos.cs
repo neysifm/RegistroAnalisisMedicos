@@ -39,7 +39,6 @@ namespace AnalisisMedicos.UI.Registros
             {
                 MessageBox.Show("Error");
             }
-
         }
 
         private void CargarTipos()
@@ -185,6 +184,12 @@ namespace AnalisisMedicos.UI.Registros
         {
             RegistroUsuarios ru = new RegistroUsuarios();
             ru.ShowDialog();
+        }
+
+        private void TipoAnalisismetroButton_Click(object sender, EventArgs e)
+        {
+            TipoAnalisis ta = new TipoAnalisis();
+            ta.ShowDialog();
         }
     }
 }

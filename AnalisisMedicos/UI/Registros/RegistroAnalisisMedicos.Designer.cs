@@ -266,6 +266,7 @@
             this.TipoAnalisismetroButton.TabIndex = 17;
             this.TipoAnalisismetroButton.Text = "+";
             this.TipoAnalisismetroButton.UseSelectable = true;
+            this.TipoAnalisismetroButton.Click += new System.EventHandler(this.TipoAnalisismetroButton_Click);
             // 
             // UsuarioMasmetroButton
             // 
