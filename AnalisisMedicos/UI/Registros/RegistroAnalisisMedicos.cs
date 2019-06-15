@@ -61,7 +61,7 @@ namespace AnalisisMedicos.UI.Registros
 
         }
 
-        private void CargarGrip()
+        private void ActualizarGrip()
         {
             DetallesdataGridView.DataSource = null;
             DetallesdataGridView.DataSource = Detalles;
@@ -75,7 +75,7 @@ namespace AnalisisMedicos.UI.Registros
             AnalisismetroComboBox.SelectedIndex = 0;
             ResultadometroTextBox.Text = string.Empty;
             Detalles = new List<AnalisisDetalle>();
-            CargarGrip();
+            ActualizarGrip();
         }
 
         private void LlenarCampos(Analisis analisis)
@@ -85,19 +85,19 @@ namespace AnalisisMedicos.UI.Registros
             FechametroDateTime.Value = analisis.Fecha;
             UsuariometroComboBox.SelectedValue = analisis.UsuarioId;
             this.Detalles = analisis.AnalisisDetalle;
-            CargarGrip();
+            ActualizarGrip();
 
         }
 
         private Analisis LlenarClase()
         {
-            Analisis analisis = new Analisis();
-
-            analisis.AnalisisId = (int)IDnumericUpDown.Value;
-            analisis.Fecha = FechametroDateTime.Value;
-            analisis.UsuarioId = (int)UsuariometroComboBox.SelectedValue;
-            analisis.AnalisisDetalle = this.Detalles;
-
+            Analisis analisis = new Analisis
+            {
+                AnalisisId = (int)IDnumericUpDown.Value,
+                Fecha = FechametroDateTime.Value,
+                UsuarioId = (int)UsuariometroComboBox.SelectedValue,
+                AnalisisDetalle = this.Detalles
+            };
             return analisis;
         }
 
@@ -128,7 +128,6 @@ namespace AnalisisMedicos.UI.Registros
                 {
                     MessageBox.Show("No se encontro el analisis");
                 }
-
             }
             catch (Exception)
             {
@@ -140,5 +139,49 @@ namespace AnalisisMedicos.UI.Registros
         {
 
         }
+
+        private void GuardarmetroButton_Click(object sender, EventArgs e)
+        {
+            if (IDnumericUpDown.Value > 0)
+            {
+                if (Validar())
+                {
+                    if (AnalisisBLL.Modificar(LlenarClase()))
+                    {
+                        MessageBox.Show("El registro se actualizo correctamente");
+                        Limpiar();
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                if (Validar())
+                {
+                    if (AnalisisBLL.Guardar(LlenarClase()) == true)
+                    {
+                        MessageBox.Show("El registro se guardo correctamente");
+                        Limpiar();
+                        return;
+                    }
+                }
+            }
+            MessageBox.Show("Error al intentar guardar o modificar el registro!");
+        }
+
+        private void EliminarmetroButton_Click(object sender, EventArgs e)
+        {
+            if (Validar())
+            {
+                if (AnalisisBLL.Eliminar(Convert.ToInt32(IDnumericUpDown.Value)))
+                {
+                    MessageBox.Show("Registro Eliminado Correctamente!");
+                    Limpiar();
+                    return;
+                }
+                MessageBox.Show("Error al intentar eliminar el registro!");
+            }
+        }
     }
 }
+

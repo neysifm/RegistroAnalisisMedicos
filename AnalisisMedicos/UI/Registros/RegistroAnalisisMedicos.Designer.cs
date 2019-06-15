@@ -230,6 +230,7 @@
             this.GuardarmetroButton.TabIndex = 9;
             this.GuardarmetroButton.Text = "Guardar";
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // EliminarmetroButton
             // 
@@ -239,6 +240,7 @@
             this.EliminarmetroButton.TabIndex = 10;
             this.EliminarmetroButton.Text = "Eliminar";
             this.EliminarmetroButton.UseSelectable = true;
+            this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
             // 
             // DetallesdataGridView
             // 
