@@ -37,6 +37,7 @@
             this.FechametroDateTime = new MetroFramework.Controls.MetroDateTime();
             this.UsuariometroComboBox = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.DetallesdataGridView = new System.Windows.Forms.DataGridView();
             this.RemovermetroButton = new MetroFramework.Controls.MetroButton();
             this.AgregarmetroButton = new MetroFramework.Controls.MetroButton();
             this.ResultadometroTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -46,8 +47,9 @@
             this.NuevometroButton = new MetroFramework.Controls.MetroButton();
             this.GuardarmetroButton = new MetroFramework.Controls.MetroButton();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
-            this.DetallesdataGridView = new System.Windows.Forms.DataGridView();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TipoAnalisismetroButton = new MetroFramework.Controls.MetroButton();
+            this.UsuarioMasmetroButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesdataGridView)).BeginInit();
@@ -112,12 +114,13 @@
             this.UsuariometroComboBox.ItemHeight = 23;
             this.UsuariometroComboBox.Location = new System.Drawing.Point(375, 156);
             this.UsuariometroComboBox.Name = "UsuariometroComboBox";
-            this.UsuariometroComboBox.Size = new System.Drawing.Size(243, 29);
+            this.UsuariometroComboBox.Size = new System.Drawing.Size(212, 29);
             this.UsuariometroComboBox.TabIndex = 6;
             this.UsuariometroComboBox.UseSelectable = true;
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.TipoAnalisismetroButton);
             this.metroPanel1.Controls.Add(this.DetallesdataGridView);
             this.metroPanel1.Controls.Add(this.RemovermetroButton);
             this.metroPanel1.Controls.Add(this.AgregarmetroButton);
@@ -136,6 +139,14 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // DetallesdataGridView
+            // 
+            this.DetallesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetallesdataGridView.Location = new System.Drawing.Point(3, 70);
+            this.DetallesdataGridView.Name = "DetallesdataGridView";
+            this.DetallesdataGridView.Size = new System.Drawing.Size(563, 175);
+            this.DetallesdataGridView.TabIndex = 15;
+            // 
             // RemovermetroButton
             // 
             this.RemovermetroButton.Location = new System.Drawing.Point(3, 251);
@@ -147,7 +158,7 @@
             // 
             // AgregarmetroButton
             // 
-            this.AgregarmetroButton.Location = new System.Drawing.Point(380, 41);
+            this.AgregarmetroButton.Location = new System.Drawing.Point(438, 41);
             this.AgregarmetroButton.Name = "AgregarmetroButton";
             this.AgregarmetroButton.Size = new System.Drawing.Size(35, 23);
             this.AgregarmetroButton.TabIndex = 12;
@@ -169,7 +180,7 @@
             this.ResultadometroTextBox.CustomButton.UseSelectable = true;
             this.ResultadometroTextBox.CustomButton.Visible = false;
             this.ResultadometroTextBox.Lines = new string[0];
-            this.ResultadometroTextBox.Location = new System.Drawing.Point(202, 41);
+            this.ResultadometroTextBox.Location = new System.Drawing.Point(260, 41);
             this.ResultadometroTextBox.MaxLength = 32767;
             this.ResultadometroTextBox.Name = "ResultadometroTextBox";
             this.ResultadometroTextBox.PasswordChar = '\0';
@@ -187,7 +198,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(202, 16);
+            this.metroLabel5.Location = new System.Drawing.Point(257, 19);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(66, 19);
             this.metroLabel5.TabIndex = 10;
@@ -243,23 +254,35 @@
             this.EliminarmetroButton.UseSelectable = true;
             this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
             // 
-            // DetallesdataGridView
-            // 
-            this.DetallesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DetallesdataGridView.Location = new System.Drawing.Point(3, 70);
-            this.DetallesdataGridView.Name = "DetallesdataGridView";
-            this.DetallesdataGridView.Size = new System.Drawing.Size(563, 175);
-            this.DetallesdataGridView.TabIndex = 15;
-            // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // TipoAnalisismetroButton
+            // 
+            this.TipoAnalisismetroButton.Location = new System.Drawing.Point(187, 38);
+            this.TipoAnalisismetroButton.Name = "TipoAnalisismetroButton";
+            this.TipoAnalisismetroButton.Size = new System.Drawing.Size(39, 29);
+            this.TipoAnalisismetroButton.TabIndex = 17;
+            this.TipoAnalisismetroButton.Text = "+";
+            this.TipoAnalisismetroButton.UseSelectable = true;
+            // 
+            // UsuarioMasmetroButton
+            // 
+            this.UsuarioMasmetroButton.Location = new System.Drawing.Point(593, 156);
+            this.UsuarioMasmetroButton.Name = "UsuarioMasmetroButton";
+            this.UsuarioMasmetroButton.Size = new System.Drawing.Size(25, 29);
+            this.UsuarioMasmetroButton.TabIndex = 18;
+            this.UsuarioMasmetroButton.Text = "+";
+            this.UsuarioMasmetroButton.UseSelectable = true;
+            this.UsuarioMasmetroButton.Click += new System.EventHandler(this.UsuarioMasmetroButton_Click);
             // 
             // RegistroAnalisisMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 570);
+            this.Controls.Add(this.UsuarioMasmetroButton);
             this.Controls.Add(this.EliminarmetroButton);
             this.Controls.Add(this.GuardarmetroButton);
             this.Controls.Add(this.NuevometroButton);
@@ -304,5 +327,7 @@
         private MetroFramework.Controls.MetroButton EliminarmetroButton;
         private System.Windows.Forms.DataGridView DetallesdataGridView;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private MetroFramework.Controls.MetroButton TipoAnalisismetroButton;
+        private MetroFramework.Controls.MetroButton UsuarioMasmetroButton;
     }
 }

@@ -180,6 +180,12 @@ namespace AnalisisMedicos.UI.Registros
         {
             Limpiar();
         }
+
+        private void UsuarioMasmetroButton_Click(object sender, EventArgs e)
+        {
+            RegistroUsuarios ru = new RegistroUsuarios();
+            ru.ShowDialog();
+        }
     }
 }
 
