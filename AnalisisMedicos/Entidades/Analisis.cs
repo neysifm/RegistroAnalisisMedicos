@@ -14,6 +14,7 @@ namespace AnalisisMedicos.Entidades
         public int AnalisisId { get; set; }
         public int TipoId     { get; set; }
         public DateTime Fecha { get; set; }
+        public int UsuarioId { get; set; }
         public virtual List<AnalisisDetalle> AnalisisDetalle { get; set; }
 
         public Analisis()
@@ -21,6 +22,7 @@ namespace AnalisisMedicos.Entidades
             AnalisisId = 0;
             TipoId = 0;
             Fecha = DateTime.Now;
+            UsuarioId = 0;
             AnalisisDetalle = new List<AnalisisDetalle>();
         }
     }

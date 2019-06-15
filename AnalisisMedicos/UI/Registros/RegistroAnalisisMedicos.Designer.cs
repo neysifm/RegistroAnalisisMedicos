@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -46,9 +47,11 @@
             this.GuardarmetroButton = new MetroFramework.Controls.MetroButton();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
             this.DetallesdataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -93,6 +96,7 @@
             this.BuscarmetroButton.TabIndex = 4;
             this.BuscarmetroButton.Text = "Buscar";
             this.BuscarmetroButton.UseSelectable = true;
+            this.BuscarmetroButton.Click += new System.EventHandler(this.BuscarmetroButton_Click);
             // 
             // FechametroDateTime
             // 
@@ -244,6 +248,10 @@
             this.DetallesdataGridView.Size = new System.Drawing.Size(563, 175);
             this.DetallesdataGridView.TabIndex = 15;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // RegistroAnalisisMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,10 +270,12 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "RegistroAnalisisMedicos";
             this.Text = "Registro de Analisis Medicos";
+            this.Load += new System.EventHandler(this.RegistroAnalisisMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +301,6 @@
         private MetroFramework.Controls.MetroButton GuardarmetroButton;
         private MetroFramework.Controls.MetroButton EliminarmetroButton;
         private System.Windows.Forms.DataGridView DetallesdataGridView;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

@@ -78,7 +78,67 @@ namespace AnalisisMedicos.UI.Registros
             CargarGrip();
         }
 
+        private void LlenarCampos(Analisis analisis)
+        {
+            Limpiar();
+            IDnumericUpDown.Value = analisis.AnalisisId;
+            FechametroDateTime.Value = analisis.Fecha;
+            UsuariometroComboBox.SelectedValue = analisis.UsuarioId;
+            this.Detalles = analisis.AnalisisDetalle;
+            CargarGrip();
 
-     
+        }
+
+        private Analisis LlenarClase()
+        {
+            Analisis analisis = new Analisis();
+
+            analisis.AnalisisId = (int)IDnumericUpDown.Value;
+            analisis.Fecha = FechametroDateTime.Value;
+            analisis.UsuarioId = (int)UsuariometroComboBox.SelectedValue;
+            analisis.AnalisisDetalle = this.Detalles;
+
+            return analisis;
+        }
+
+        private bool Validar()
+        {
+            bool paso = true;
+            errorProvider.Clear();
+
+            if (Detalles.Count == 0)
+            {
+                MessageBox.Show("Debe agregar analiis para guardar");
+            }
+            return paso;
+        }
+
+        private void BuscarmetroButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Analisis analisis;
+                analisis = AnalisisBLL.Buscar((int)IDnumericUpDown.Value);
+                if (analisis != null)
+                {
+                    Limpiar();
+                    LlenarCampos(analisis);
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el analisis");
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+
+        private void RegistroAnalisisMedicos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
