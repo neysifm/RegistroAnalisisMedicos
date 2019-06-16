@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -40,7 +41,9 @@
             this.NuevometroButton = new MetroFramework.Controls.MetroButton();
             this.GuardarmetroButton = new MetroFramework.Controls.MetroButton();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -184,6 +187,7 @@
             this.BuscarmetroButton.TabIndex = 8;
             this.BuscarmetroButton.Text = "Buscar";
             this.BuscarmetroButton.UseSelectable = true;
+            this.BuscarmetroButton.Click += new System.EventHandler(this.BuscarmetroButton_Click);
             // 
             // NuevometroButton
             // 
@@ -193,6 +197,7 @@
             this.NuevometroButton.TabIndex = 9;
             this.NuevometroButton.Text = "Nuevo";
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -202,6 +207,7 @@
             this.GuardarmetroButton.TabIndex = 10;
             this.GuardarmetroButton.Text = "Guardar";
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // EliminarmetroButton
             // 
@@ -211,6 +217,11 @@
             this.EliminarmetroButton.TabIndex = 11;
             this.EliminarmetroButton.Text = "Eliminar";
             this.EliminarmetroButton.UseSelectable = true;
+            this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // RegistroUsuarios
             // 
@@ -231,8 +242,8 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "RegistroUsuarios";
             this.Text = "Registro de Usuarios";
-            this.Load += new System.EventHandler(this.RegistroUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +263,6 @@
         private MetroFramework.Controls.MetroButton NuevometroButton;
         private MetroFramework.Controls.MetroButton GuardarmetroButton;
         private MetroFramework.Controls.MetroButton EliminarmetroButton;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
