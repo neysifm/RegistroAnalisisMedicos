@@ -105,7 +105,7 @@ namespace AnalisisMedicos.UI.Registros
 
             if (Detalles.Count == 0)
             {
-                MessageBox.Show("Debe agregar analiis para guardar");
+                MessageBox.Show("Debe agregar analisis para guardar");
             }
             return paso;
         }
