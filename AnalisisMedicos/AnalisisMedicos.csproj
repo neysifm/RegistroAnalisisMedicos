@@ -135,5 +135,11 @@
     <Folder Include="UI\Consultas\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\FotosRegistroAnalisis\Diapositiva1.PNG" />
+    <Content Include="UI\FotosRegistroAnalisis\Diapositiva2.PNG" />
+    <Content Include="UI\FotosRegistroAnalisis\Diapositiva3.PNG" />
+    <Content Include="UI\FotosRegistroAnalisis\Diapositiva4.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
