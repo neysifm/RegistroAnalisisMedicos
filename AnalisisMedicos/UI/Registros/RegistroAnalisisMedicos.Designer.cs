@@ -37,6 +37,7 @@
             this.FechametroDateTime = new MetroFramework.Controls.MetroDateTime();
             this.UsuariometroComboBox = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.TipoAnalisismetroButton = new MetroFramework.Controls.MetroButton();
             this.DetallesdataGridView = new System.Windows.Forms.DataGridView();
             this.RemovermetroButton = new MetroFramework.Controls.MetroButton();
             this.AgregarmetroButton = new MetroFramework.Controls.MetroButton();
@@ -48,7 +49,6 @@
             this.GuardarmetroButton = new MetroFramework.Controls.MetroButton();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.TipoAnalisismetroButton = new MetroFramework.Controls.MetroButton();
             this.UsuarioMasmetroButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -138,6 +138,16 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // TipoAnalisismetroButton
+            // 
+            this.TipoAnalisismetroButton.Location = new System.Drawing.Point(187, 38);
+            this.TipoAnalisismetroButton.Name = "TipoAnalisismetroButton";
+            this.TipoAnalisismetroButton.Size = new System.Drawing.Size(39, 29);
+            this.TipoAnalisismetroButton.TabIndex = 17;
+            this.TipoAnalisismetroButton.Text = "+";
+            this.TipoAnalisismetroButton.UseSelectable = true;
+            this.TipoAnalisismetroButton.Click += new System.EventHandler(this.TipoAnalisismetroButton_Click);
             // 
             // DetallesdataGridView
             // 
@@ -257,16 +267,6 @@
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
-            // 
-            // TipoAnalisismetroButton
-            // 
-            this.TipoAnalisismetroButton.Location = new System.Drawing.Point(187, 38);
-            this.TipoAnalisismetroButton.Name = "TipoAnalisismetroButton";
-            this.TipoAnalisismetroButton.Size = new System.Drawing.Size(39, 29);
-            this.TipoAnalisismetroButton.TabIndex = 17;
-            this.TipoAnalisismetroButton.Text = "+";
-            this.TipoAnalisismetroButton.UseSelectable = true;
-            this.TipoAnalisismetroButton.Click += new System.EventHandler(this.TipoAnalisismetroButton_Click);
             // 
             // UsuarioMasmetroButton
             // 

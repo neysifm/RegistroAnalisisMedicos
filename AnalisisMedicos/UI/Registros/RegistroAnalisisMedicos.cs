@@ -58,7 +58,7 @@ namespace AnalisisMedicos.UI.Registros
             }
         }
 
-        private void ActualizarGrip()
+        private void ActualizarGrid()
         {
             DetallesdataGridView.DataSource = null;
             DetallesdataGridView.DataSource = Detalles;
@@ -72,7 +72,7 @@ namespace AnalisisMedicos.UI.Registros
             AnalisismetroComboBox.SelectedIndex = 0;
             ResultadometroTextBox.Text = string.Empty;
             Detalles = new List<AnalisisDetalle>();
-            ActualizarGrip();
+            ActualizarGrid();
         }
 
         private void LlenarCampos(Analisis analisis)
@@ -82,7 +82,7 @@ namespace AnalisisMedicos.UI.Registros
             FechametroDateTime.Value = analisis.Fecha;
             UsuariometroComboBox.SelectedValue = analisis.UsuarioId;
             this.Detalles = analisis.AnalisisDetalle;
-            ActualizarGrip();
+            ActualizarGrid();
 
         }
 
